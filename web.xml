@@ -46,5 +46,25 @@
     <servlet-name>HelloForm</servlet-name>
     <url-pattern>/HelloForm</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>CheckBox</servlet-name>
+    <servlet-class>CheckBox</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>CheckBox</servlet-name>
+    <url-pattern>/CheckBox</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ReadParams</servlet-name>
+    <servlet-class>ReadParams</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ReadParams</servlet-name>
+    <url-pattern>/ReadParams</url-pattern>
+  </servlet-mapping>
   
 </web-app>
