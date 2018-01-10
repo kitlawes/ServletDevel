@@ -5,7 +5,8 @@ import javax.servlet.http.*;
 
 // Extend HttpServlet class
 public class HelloForm extends HttpServlet {
- 
+
+   // Method to handle GET method request.
    public void doGet(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
       
@@ -15,7 +16,8 @@ public class HelloForm extends HttpServlet {
       PrintWriter out = response.getWriter();
       String title = "Using GET Method to Read Form Data";
       String docType =
-         "<!doctype html public \"-//w3c//dtd html 4.0 " + "transitional//en\">\n";
+         "<!doctype html public \"-//w3c//dtd html 4.0 " +
+         "transitional//en\">\n";
          
       out.println(docType +
          "<html>\n" +
@@ -28,7 +30,15 @@ public class HelloForm extends HttpServlet {
                   "  <li><b>Last Name</b>: "
                   + request.getParameter("last_name") + "\n" +
                "</ul>\n" +
-            "</body>\n" +
-         "</html>");
+            "</body>" +
+         "</html>"
+      );
+   }
+
+   // Method to handle POST method request.
+   public void doPost(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+
+      doGet(request, response);
    }
 }
